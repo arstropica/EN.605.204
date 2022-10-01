@@ -46,14 +46,14 @@ main:
 	EOR r5, r4, r5
 	LDR r0, =status3
 	MOV r1, r4
-    MOV r2, r5
+	MOV r2, r5
 	BL printf
 
 	# Third EOR operation
 	EOR r4, r5, r4
 	LDR r0, =status4
-    MOV r1, r4
-    MOV r2, r5
+	MOV r1, r4
+	MOV r2, r5
 	BL printf
 
 	# Pop the stack record

@@ -18,12 +18,12 @@ main:
 	LDR r1, =feet
 	BL scanf
 
-    # Read second integer value
-    LDR r0, =prompti
-    BL printf
-    LDR r0, =format
-    LDR r1, =inch
-    BL scanf
+	# Read second integer value
+	LDR r0, =prompti
+	BL printf
+	LDR r0, =format
+	LDR r1, =inch
+	BL scanf
 
 	# Multiply by immediate value
 	LDR r0, =feet
