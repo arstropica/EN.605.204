@@ -50,8 +50,10 @@ miles2kilometer:
 .text
 kph:
 	# Push the stack record
-	SUB sp, sp, #4
+	# Save preserved register to stack
+	SUB sp, sp, #8
 	STR lr, [sp, #0]
+	STR r4, [sp, #4]
 
 	# Store input value for hours in preserved register
 	MOV r4, r0
@@ -64,9 +66,11 @@ kph:
 	MOV r1, r4
 	BL __aeabi_idiv
 
+	# Restore preserved register from stack
 	# Pop the stack record
+	LDR r4, [sp, #4]
 	LDR lr, [sp, #0]
-	ADD sp, sp, #4
+	ADD sp, sp, #8
 	MOV pc, lr
 
 .data
