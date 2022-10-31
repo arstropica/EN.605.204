@@ -50,7 +50,7 @@ main:
 			BL scanf
 
 			# Get next value
-            ADD r5, r5, #1			
+			ADD r5, r5, #1			
 			B StartInputLoop
 	EndInputLoop:
 
